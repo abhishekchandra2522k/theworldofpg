@@ -2,19 +2,9 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import { PostCard, Categories, PostWidget } from '../components'
+import { getPosts } from '../services'
 
-const posts = [
-  {
-    title: 'Feeling Thankful Is Helpful for Anxiety',
-    excerpt: 'Learn about managing anxiety',
-  },
-  {
-    title: 'Staying Organized Helps My Anxiety',
-    excerpt: 'Learn about managing anxiety',
-  },
-]
-
-const Home: NextPage = () => {
+export default function Home({ posts }) {
   return (
     <div className='container mx-auto px-10 mb-8'>
       <Head>
@@ -25,7 +15,7 @@ const Home: NextPage = () => {
       <div className='grid grid-cols-1 lg:grid-cols-12 gap-12 text-white'>
         <div className='lg:col-span-8 col-span-1'>
           {posts.map((post, index) => (
-            <PostCard post={post} key={post.title} />
+            <PostCard post={post.node} key={index} />
           ))}
         </div>
 
@@ -40,4 +30,10 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export async function getStaticProps() {
+  const posts = (await getPosts()) || []
+
+  return {
+    props: { posts },
+  }
+}
