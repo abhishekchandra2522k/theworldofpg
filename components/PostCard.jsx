@@ -3,7 +3,7 @@ import moment from 'moment'
 import Link from 'next/link'
 
 const PostCard = ({ post }) => {
-  console.log(post)
+  // console.log(post)
 
   return (
     <div className='bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8'>
@@ -33,7 +33,7 @@ const PostCard = ({ post }) => {
         <div className='font-medium text-gray-700'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
-            className='h-6 w-6 inline mr-2 text-pink-500'
+            className='h-6 w-6 inline mr-2 text-black-500'
             fill='none'
             viewBox='0 0 24 24'
             stroke='currentColor'
@@ -54,7 +54,7 @@ const PostCard = ({ post }) => {
       </p>
       <div className='text-center'>
         <Link href={`\post\${post.slug}`}>
-          <span className='transition duration-500 transform hover:-translate-y-1 inline-block bg-pink-600 text-lg font-medium rounded-full text-white px-8 py-2 cursor-pointer hover:bg-pink-300 hover:text-black'>
+          <span className='transition duration-500 transform hover:-translate-y-1 inline-block bg-black text-lg font-medium rounded-full text-white px-8 py-2 cursor-pointer hover:bg-pink-300 hover:text-black'>
             continue reading...
           </span>
         </Link>
