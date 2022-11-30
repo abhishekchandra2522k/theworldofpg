@@ -54,6 +54,18 @@ const PostDetail = ({ post }) => {
             src={obj.src}
           />
         )
+      case 'iframe':
+        return (
+          <iframe
+            key={index}
+            src={obj.url}
+            title={obj.title}
+            frameborder='0'
+            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+            allowFullScreen
+            className='w-full lg:h-96 sm:h-64'
+          ></iframe>
+        )
       default:
         return modifiedText
     }
@@ -101,7 +113,7 @@ const PostDetail = ({ post }) => {
             <span>{moment(post.createdAt).format('MMM DD, YYYY')}</span>
           </div>
         </div>
-        <h1 className='mb-8 text-3xl font-semibold'>{post.title}</h1>
+        <h1 className='mb-8 mt-8 text-3xl font-semibold'>{post.title}</h1>
         {post.content.raw.children.map((typeObj, index) => {
           const children = typeObj.children.map((item, itemIndex) =>
             getContentFragment(itemIndex, item.text, item)
