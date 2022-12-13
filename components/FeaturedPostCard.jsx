@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const FeaturedPostCard = ({ post }) => (
-  <div className='relative h-72'>
+  <div className='relative h-72 mt-20'>
     <div
       className='absolute rounded-lg bg-center bg-no-repeat bg-cover shadow-md inline-block w-full h-72'
       style={{ backgroundImage: `url('${post.featuredImage.url}')` }}
@@ -18,14 +18,14 @@ const FeaturedPostCard = ({ post }) => (
         {post.title}
       </p>
       <div className='flex items-center absolute bottom-5 w-full justify-center'>
-        <Image
+        {/* <Image
           unoptimized
           alt={post.author.name}
           height={30}
           width={30}
           className='align-middle drop-shadow-lg rounded-full'
           src={post.author.photo.url}
-        />
+        /> */}
         <p className='inline align-middle text-white text-shadow ml-2 font-medium'>
           {post.author.name}
         </p>

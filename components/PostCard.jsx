@@ -19,13 +19,13 @@ const PostCard = ({ post }) => {
       </h1>
       <div className='block lg:flex text-center items-center justify-center mb-8 w-full'>
         <div className='flex items-center justify-center mb-4 lg:mb-0 w-full lg:w-auto mr-8'>
-          <img
+          {/* <img
             src={post.author.photo.url}
             alt={post.author.name}
             height='30px'
             width='30px'
             className='align-middle rounded-full'
-          />
+          /> */}
           <p className='inline align-middle text-gray-700 ml-2 text-lg'>
             {post.author.name}
           </p>
@@ -54,7 +54,7 @@ const PostCard = ({ post }) => {
       </p>
       <div className='text-center'>
         <Link href={`/post/${post.slug}`}>
-          <span className='transition duration-500 transform hover:-translate-y-1 inline-block bg-black text-lg font-medium rounded-full text-white px-8 py-2 cursor-pointer hover:bg-pink-300 hover:text-black'>
+          <span className='transition duration-500 transform inline-block bg-gray-900 text-lg font-medium rounded-full text-white px-8 py-2 cursor-pointer hover:bg-gray-500'>
             continue reading...
           </span>
         </Link>

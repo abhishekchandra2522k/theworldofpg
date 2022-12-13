@@ -73,7 +73,7 @@ const PostDetail = ({ post }) => {
   }
 
   return (
-    <div className='bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8'>
+    <div className='bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8 mt-20'>
       <Head>
         <title>{post.title}</title>
         <link rel='icon' href='/favicon.ico' />
@@ -88,13 +88,13 @@ const PostDetail = ({ post }) => {
       <div className='px-4 lg:px-0'>
         <div className='flex items-center-mb-8 w-full'>
           <div className='flex items-center mb-4 lg:mb-0 w-full lg:w-auto mr-8'>
-            <img
+            {/* <img
               src={post.author.photo.url}
               alt={post.author.name}
               height='30px'
               width='30px'
               className='align-middle rounded-full'
-            />
+            /> */}
             <p className='inline align-middle text-gray-700 ml-2 text-lg'>
               {post.author.name}
             </p>
