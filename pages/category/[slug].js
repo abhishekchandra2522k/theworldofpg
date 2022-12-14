@@ -1,10 +1,16 @@
-import React from 'react'
+import Head from 'next/head'
+import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { getCategories, getCategoryPost } from '../../services'
 import { PostCard, Categories, Loader } from '../../components'
 
 const CategoryPost = ({ posts }) => {
   const router = useRouter()
+  const [categories, setCategories] = useState([])
+
+  useEffect(() => {
+    getCategories().then((newCategories) => setCategories(newCategories))
+  }, [])
 
   if (router.isFallback) {
     return <Loader />
@@ -12,6 +18,18 @@ const CategoryPost = ({ posts }) => {
 
   return (
     <div className='container mx-auto px-5 mb-8 pt-20'>
+      {categories.map(function (category) {
+        if (category.slug === router.query.slug) {
+          return (
+            <Head>
+              <title key={category.name}>
+                {category.name} | The World of PG
+              </title>
+            </Head>
+          )
+        }
+      })}
+
       <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>
         <div className='col-span-1 lg:col-span-8'>
           {posts.map((post, index) => (
