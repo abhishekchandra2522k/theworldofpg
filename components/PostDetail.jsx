@@ -61,7 +61,7 @@ const PostDetail = ({ post }) => {
             key={index}
             src={obj.url}
             title={obj.title}
-            frameborder='0'
+            frameBorder='0'
             allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
             allowFullScreen
             className='w-full lg:h-96 sm:h-64'
