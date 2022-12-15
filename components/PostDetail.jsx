@@ -1,6 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import moment from 'moment'
+import Link from 'next/link'
 
 const PostDetail = ({ post }) => {
   const getContentFragment = (index, text, obj, type) => {
@@ -73,7 +74,7 @@ const PostDetail = ({ post }) => {
   }
 
   return (
-    <div className='bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8 mt-20'>
+    <div className='bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-4 mt-20'>
       <Head>
         <title>{post.title}</title>
         <link rel='icon' href='/favicon.ico' />
@@ -82,7 +83,7 @@ const PostDetail = ({ post }) => {
         <img
           src={post.featuredImage.url}
           alt={post.title}
-          className='object-top h-full w-full rounded-t-lg'
+          className='object-top h-full w-full rounded-lg'
         />
       </div>
       <div className='px-4 lg:px-0'>
@@ -95,9 +96,11 @@ const PostDetail = ({ post }) => {
               width='30px'
               className='align-middle rounded-full'
             /> */}
-            <p className='inline align-middle text-gray-700 ml-2 text-lg'>
-              {post.author.name}
-            </p>
+            <Link href='/about'>
+              <p className='inline align-middle text-gray-700 ml-2 text-lg hover:text-black'>
+                {post.author.name}
+              </p>
+            </Link>
           </div>
           <div className='font-medium text-gray-700'>
             <svg
@@ -118,7 +121,7 @@ const PostDetail = ({ post }) => {
             <span>{moment(post.createdAt).format('MMM DD, YYYY')}</span>
           </div>
         </div>
-        <h1 className='mb-8 mt-8 text-3xl font-semibold'>{post.title}</h1>
+        <h1 className='mb-6 mt-8 text-3xl font-semibold'>{post.title}</h1>
         {post.content.raw.children.map((typeObj, index) => {
           const children = typeObj.children.map((item, itemIndex) =>
             getContentFragment(itemIndex, item.text, item)

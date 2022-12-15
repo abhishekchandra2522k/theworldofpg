@@ -14,10 +14,10 @@ const PostCard = ({ post }) => {
           className='object-top absolute h-80 w-full object-cover shadow-lg rounded-t-lg lg:rounded-lg'
         />
       </div>
-      <h1 className='transition duration-700 text-center text-black mb-8 cursor-pointer hover:text-pink-600 text-3xl font-semibold'>
+      <h1 className='transition duration-700 text-center text-black mb-4 cursor-pointer hover:text-pink-600 text-3xl font-semibold'>
         <Link href={`/post/${post.slug}`}>{post.title}</Link>
       </h1>
-      <div className='block lg:flex text-center items-center justify-center mb-8 w-full'>
+      <div className='block lg:flex text-center items-center justify-center mb-4 w-full'>
         <div className='flex items-center justify-center mb-4 lg:mb-0 w-full lg:w-auto mr-8'>
           {/* <img
             src={post.author.photo.url}
@@ -49,12 +49,12 @@ const PostCard = ({ post }) => {
           <span>{moment(post.createdAt).format('MMM DD, YYYY')}</span>
         </div>
       </div>
-      <p className='text-black text-lg font-normal px-4 lg:px-10 mb-8'>
+      <p className='text-black text-lg font-normal px-4 lg:px-10 mb-4'>
         {post.excerpt}
       </p>
       <div className='text-center'>
         <Link href={`/post/${post.slug}`}>
-          <span className='transition duration-500 transform inline-block bg-gray-900 text-lg font-medium rounded-full text-white px-8 py-2 cursor-pointer hover:bg-gray-500'>
+          <span className='transition duration-500 inline-block bg-gray-800 text-lg font-medium rounded-full text-white px-6 py-2 cursor-pointer hover:bg-gray-400 hover:text-black'>
             continue reading...
           </span>
         </Link>

@@ -2,13 +2,13 @@ import React from 'react'
 import Head from 'next/head'
 
 const About = () => (
-  <div className='text-center mt-20 mb-8 p-8 relative bg-black bg-opacity-20'>
+  <div className='text-center flex flex-col justify-center h-[85vh] p-8 relative bg-black bg-opacity-20 bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-gray-900 to-gray-600 bg-gradient-to-r'>
     <Head>
       <title>About Me | The World of PG</title>
       <link rel='icon' href='/favicon.ico' />
     </Head>
     <div className='absolute left-0 right-0 -top-14'></div>
-    <div className='flex flex-col items-center text-white p-10'>
+    <div className='flex flex-col justify-center items-center text-white lg:p-10'>
       <p className='text-white text-ls lg:w-2/3'>
         Hi, my name is <strong>Paawni Goyal</strong> and I am a student of Grade
         11, CISCE curriculum at GEMS Modern Academy, Dubai. <br />
