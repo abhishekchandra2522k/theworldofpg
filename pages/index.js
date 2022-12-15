@@ -11,7 +11,7 @@ export default function Home({ posts }) {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <FeaturedPosts />
-      <div className='grid grid-cols-1 lg:grid-cols-12 gap-12 text-white'>
+      <div className='grid grid-cols-1 lg:grid-cols-12 gap-10 text-white'>
         <div className='lg:col-span-8 col-span-1'>
           {posts.map((post, index) => (
             <PostCard post={post.node} key={index} />
