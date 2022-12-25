@@ -5,7 +5,7 @@ import Link from 'next/link'
 // import { grpahCMSImageLoader } from '../util'
 
 const Author = ({ author }) => (
-  <div className='mb-8 p-8 relative rounded-lg bg-black bg-opacity-20'>
+  <div className='mb-4 p-8 relative rounded-lg bg-white bg-opacity-20'>
     {/* <div className='absolute left-0 right-0 -top-14'>
       <Image
         unoptimized
@@ -18,12 +18,12 @@ const Author = ({ author }) => (
       />
     </div> */}
     <Link href='/about'>
-      <h3 className='text-white mb-4 text-xl font-bold transition duration-500 hover:text-gray-300'>
+      <h3 className='text-white text-xl transition duration-500 hover:text-black'>
         {/* <span className='text-white text-base font-medium'>Author: </span> */}
         {author.name}
       </h3>
     </Link>
-    <p className='text-white text-ls'>{author.bio}</p>
+    {/* <p className='text-white text-ls'>{author.bio}</p> */}
   </div>
 )
 

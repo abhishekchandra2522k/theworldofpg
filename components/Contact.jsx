@@ -7,7 +7,9 @@ const Contact = () => (
       <Head>
         <title>Contact | The World of PG</title>
       </Head>
-      <h3 className='text-xl mb-8 font-semibold border-b pb-4'>Contact Me</h3>
+      <h3 className='text-xl mb-8 text-white border-b border-black pb-4'>
+        Contact Me
+      </h3>
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4'>
         <input
           type='text'
@@ -43,7 +45,7 @@ const Contact = () => (
       <div className='mt-8'>
         <button
           type='button'
-          className='transition duration-500 ease hover:bg-indigo-900 inline-block bg-pink-600 rounded-full text-white px-6 py-2 cursor-pointer'
+          className='transition duration-500 ease hover:bg-gray-800 inline-block bg-black rounded-full text-white px-6 py-2 cursor-pointer'
         >
           Send
         </button>
