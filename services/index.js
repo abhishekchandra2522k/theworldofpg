@@ -175,6 +175,18 @@ export const getComments = async (slug) => {
   return result.comments
 }
 
+export const submitContact = async (obj) => {
+  const result = await fetch('/api/contacts', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(obj),
+  })
+
+  return result.json()
+}
+
 export const getFeaturedPosts = async () => {
   const query = gql`
     query GetFeaturedPosts {
