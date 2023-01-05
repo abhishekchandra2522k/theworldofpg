@@ -11,6 +11,9 @@ export default function Home({ posts }) {
           The World Of PG | A Psychology and Basketball blogging platform
         </title>
         <link rel='icon' href='/favicon.ico' />
+        <meta charset='utf-8' />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <meta name='theme-color' content='#000000' />
         {/* <!-- Primary Meta Tags --> */}
         <meta
           name='title'
@@ -40,6 +43,8 @@ export default function Home({ posts }) {
         {/* <!-- Twitter --> */}
         <meta property='twitter:card' content='summary_large_image' />
         <meta property='twitter:url' content='https://www.theworldofpg.com/' />
+        <meta property='twitter:url' content='https://theworldofpg.com/' />
+        <meta property='twitter:url' content='theworldofpg.com' />
         <meta
           property='twitter:title'
           content='The World Of PG | A Psychology and Basketball blogging platform'
