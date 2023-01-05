@@ -83,12 +83,12 @@ const PostDetail = ({ post }) => {
         <img
           src={post.featuredImage.url}
           alt={post.title}
-          className='object-top h-full w-full rounded-lg'
+          className='object-top h-full w-full rounded-t-lg sm:rounded-lg'
         />
       </div>
       <div className='px-4 lg:px-0'>
-        <div className='flex items-center-mb-8 w-full'>
-          <div className='flex items-center mb-4 lg:mb-0 w-full lg:w-auto mr-8'>
+        <div className='w-full'>
+          <div className='flex items-center mb-4 lg:mb-4 w-full lg:w-auto mr-6'>
             {/* <img
               src={post.author.photo.url}
               alt={post.author.name}
@@ -97,7 +97,7 @@ const PostDetail = ({ post }) => {
               className='align-middle rounded-full'
             /> */}
             <Link href='/about'>
-              <p className='inline align-middle text-gray-700 ml-2 text-lg hover:text-black'>
+              <p className='inline align-middle text-gray-700 text-lg hover:text-black'>
                 {post.author.name}
               </p>
             </Link>
