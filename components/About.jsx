@@ -13,13 +13,11 @@ const About = () => (
         Hi, my name is <strong>Paawni Goyal</strong> and I am a student of Grade
         11, CISCE curriculum at GEMS Modern Academy, Dubai. <br />
         <br />
-        Psychology as a subject and Basketball as a sport are my areas of
-        interests. I am keen to pursue my career in the field of psychology and
-        I believe that playing a sport helps to build and develop a strong
-        character. With this website, my aim is to help fellow students and
-        other people benefit from my knowledge of psychology and basketball. I
-        hope to be able to engage the community and hopefully in helping to
-        learn from each other.
+        Psychology as a subject is my area of interest. I am keen to pursue my
+        career in the field of psychology. With this website, I aim to help
+        fellow students and other people benefit from my understanding of
+        psychology. I hope to be able to engage the community and hopefully in
+        helping to learn from each other.
       </p>
     </div>
     {/* <h3 className='text-white mt-4 mb-4 text-xl font-bold'>
