@@ -8,7 +8,7 @@ export default function Home({ posts }) {
     <div className='container mx-auto px-5 mb-8'>
       <Head>
         <title>
-          The World Of PG | A Psychology and Basketball blogging platform
+          The World Of PG | A Psychology blogging platform
         </title>
         <link rel='icon' href='/favicon.ico' />
         <meta charset='utf-8' />
@@ -17,11 +17,15 @@ export default function Home({ posts }) {
         {/* <!-- Primary Meta Tags --> */}
         <meta
           name='title'
-          content='The World Of PG | A Psychology and Basketball blogging platform'
+          content='The World Of PG | A Psychology blogging platform'
         />
         <meta
           name='description'
-          content='Psychology as a subject and Basketball as a sport are my areas of interests. I am keen to pursue my career in the field of psychology and I believe that playing a sport helps to build and develop a strong character. With this website, my aim is to help fellow students and other people benefit from my knowledge of psychology and basketball. I hope to be able to engage the community and hopefully in helping to learn from each other.'
+          content='Psychology as a subject is my area of interest. I am keen to pursue my
+        career in the field of psychology. With this website, I aim to help
+        fellow students and other people benefit from my understanding of
+        psychology. I hope to be able to engage the community and hopefully in
+        helping to learn from each other.'
         />
 
         {/* <!-- Open Graph / Facebook --> */}
@@ -29,11 +33,15 @@ export default function Home({ posts }) {
         <meta property='og:url' content='https://www.theworldofpg.com/' />
         <meta
           property='og:title'
-          content='The World Of PG | A Psychology and Basketball blogging platform'
+          content='The World Of PG | A Psychology blogging platform'
         />
         <meta
           property='og:description'
-          content='Psychology as a subject and Basketball as a sport are my areas of interests. I am keen to pursue my career in the field of psychology and I believe that playing a sport helps to build and develop a strong character. With this website, my aim is to help fellow students and other people benefit from my knowledge of psychology and basketball. I hope to be able to engage the community and hopefully in helping to learn from each other.'
+          content='Psychology as a subject is my area of interest. I am keen to pursue my
+        career in the field of psychology. With this website, I aim to help
+        fellow students and other people benefit from my understanding of
+        psychology. I hope to be able to engage the community and hopefully in
+        helping to learn from each other.'
         />
         <meta
           property='og:image'
@@ -47,11 +55,15 @@ export default function Home({ posts }) {
         <meta property='twitter:url' content='theworldofpg.com' />
         <meta
           property='twitter:title'
-          content='The World Of PG | A Psychology and Basketball blogging platform'
+          content='The World Of PG | A Psychology blogging platform'
         />
         <meta
           property='twitter:description'
-          content='Psychology as a subject and Basketball as a sport are my areas of interests. I am keen to pursue my career in the field of psychology and I believe that playing a sport helps to build and develop a strong character. With this website, my aim is to help fellow students and other people benefit from my knowledge of psychology and basketball. I hope to be able to engage the community and hopefully in helping to learn from each other.'
+          content='Psychology as a subject is my area of interest. I am keen to pursue my
+        career in the field of psychology. With this website, I aim to help
+        fellow students and other people benefit from my understanding of
+        psychology. I hope to be able to engage the community and hopefully in
+        helping to learn from each other.'
         />
         <meta
           property='twitter:image'
