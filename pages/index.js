@@ -4,12 +4,11 @@ import { getPosts } from '../services'
 import { FeaturedPosts } from '../sections'
 
 export default function Home({ posts }) {
+  // console.log(posts)
   return (
     <div className='container mx-auto px-5 mb-8'>
       <Head>
-        <title>
-          The World Of PG | A Psychology blogging platform
-        </title>
+        <title>The World Of PG | A Psychology blogging platform</title>
         <link rel='icon' href='/favicon.ico' />
         <meta charset='utf-8' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
@@ -73,9 +72,12 @@ export default function Home({ posts }) {
       <FeaturedPosts />
       <div className='grid grid-cols-1 lg:grid-cols-12 gap-10 text-white'>
         <div className='lg:col-span-8 col-span-1'>
-          {posts.map((post, index) => (
-            <PostCard post={post.node} key={index} />
-          ))}
+          {posts
+            .slice(0)
+            .reverse()
+            .map((post, index) => (
+              <PostCard post={post.node} key={index} />
+            ))}
         </div>
 
         <div className='lg:col-span-4 col-span-1'>
