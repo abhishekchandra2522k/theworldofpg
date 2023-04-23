@@ -26,36 +26,39 @@ const PostWidget = ({ categories, slug }) => {
         {slug ? 'Related Posts' : 'Recent Posts'}
       </h3>
       <div className=''>
-        {relatedPosts.map((post) => (
-          <Link href={`/post/${post.slug}`} key={post.title}>
-            <div
-              className='flex items-center w-full mb-2 bg-gray-200 py-2 px-3 rounded-full hover:bg-gray-800 hover:text-white transition duration-500'
-              key={post.title}
-            >
-              <div className='w-16 flex-none'>
-                <img
-                  src={post.featuredImage.url}
-                  alt={post.title}
-                  height='60px'
-                  width='60px'
-                  className='align-middle rounded-full'
-                />
+        {relatedPosts
+          .slice(0)
+          .reverse()
+          .map((post) => (
+            <Link href={`/post/${post.slug}`} key={post.title}>
+              <div
+                className='flex items-center w-full mb-2 bg-gray-200 py-2 px-3 rounded-full hover:bg-gray-800 hover:text-white transition duration-500'
+                key={post.title}
+              >
+                <div className='w-16 flex-none'>
+                  <img
+                    src={post.featuredImage.url}
+                    alt={post.title}
+                    height='60px'
+                    width='60px'
+                    className='align-middle rounded-full'
+                  />
+                </div>
+                <div className='flex-grow ml-4'>
+                  <Link
+                    href={`/post/${post.slug}`}
+                    key={post.title}
+                    className='text-sm font-semibold'
+                  >
+                    {post.title}
+                  </Link>
+                  <p className='font-xs text-xs'>
+                    {moment(post.createdAt).format('MMM DD, YYYY')}
+                  </p>
+                </div>
               </div>
-              <div className='flex-grow ml-4'>
-                <Link
-                  href={`/post/${post.slug}`}
-                  key={post.title}
-                  className='text-sm font-semibold'
-                >
-                  {post.title}
-                </Link>
-                <p className='font-xs text-xs'>
-                  {moment(post.createdAt).format('MMM DD, YYYY')}
-                </p>
-              </div>
-            </div>
-          </Link>
-        ))}
+            </Link>
+          ))}
       </div>
     </div>
   )
