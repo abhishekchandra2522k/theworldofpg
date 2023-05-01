@@ -11,7 +11,7 @@ const About = () => (
     <div className='flex flex-col justify-center items-center text-white lg:p-10'>
       <p className='text-white text-ls lg:w-2/3'>
         Hi, my name is <strong>Paawni Goyal</strong> and I am a student of Grade
-        11, CISCE curriculum at GEMS Modern Academy, Dubai. <br />
+        12, CISCE curriculum at GEMS Modern Academy, Dubai. <br />
         <br />
         Psychology as a subject is my area of interest. I am keen to pursue my
         career in the field of psychology. With this website, I aim to help
