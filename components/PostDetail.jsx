@@ -68,6 +68,20 @@ const PostDetail = ({ post }) => {
             className='w-full lg:h-96 sm:h-64'
           ></iframe>
         )
+      case 'video':
+        return (
+          <video
+            key={index}
+            title={obj.title}
+            allowFullScreen
+            className='w-full lg:h-96 sm:h-64'
+            controls
+            controlsList='nodownload'
+            poster={obj.src}
+          >
+            <source src={obj.src} type='video/mp4'></source>
+          </video>
+        )
       default:
         return modifiedText
     }
