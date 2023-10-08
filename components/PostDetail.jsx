@@ -71,8 +71,6 @@ const PostDetail = ({ post }) => {
       case 'video':
         return (
           <video
-            key={index}
-            title={obj.title}
             allowFullScreen
             className='w-full lg:h-96 sm:h-64'
             controls
