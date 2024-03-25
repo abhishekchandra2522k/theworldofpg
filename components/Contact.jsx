@@ -55,13 +55,11 @@ const Contact = () => {
 
   return (
     <div className='h-[75vh]'>
-      <div className='container mx-auto lg:w-2/4 bg-white bg-opacity-50 shadow-lg rounded-lg p-8 pb-12 mb-8 mt-16'>
+      <div className='container mx-auto lg:w-2/4 rounded-lg p-8 pb-12 mb-8 mt-16'>
         <Head>
-          <title>Contact | The World of PG</title>
+          <title>Contact | Dramatic Pages</title>
         </Head>
-        <h3 className='text-xl mb-8 text-white border-b border-black pb-4'>
-          Contact Me
-        </h3>
+        <h3 className='text-6xl mb-8 pb-4 vibes'>GET IN TOUCH</h3>
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4'>
           <input
             type='text'
@@ -93,9 +91,9 @@ const Contact = () => {
           <button
             type='button'
             onClick={handleContactSubmission}
-            className='transition duration-500 ease hover:bg-gray-800 inline-block bg-black rounded-full text-white px-6 py-2 cursor-pointer'
+            className='border-2 border-black bg-rose-50 transition duration-500 ease hover:bg-gray-800 inline-block rounded-full px-6 py-2 cursor-pointer'
           >
-            Send
+            Send Message
           </button>
           {showSuccessMessage && (
             <span className='text-xl float-right font-semibold mt-3 text-green-500'>
